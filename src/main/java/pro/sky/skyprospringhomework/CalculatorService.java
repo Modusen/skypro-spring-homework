@@ -13,18 +13,24 @@ public class CalculatorService {
     }
 
     public String getSumCalculator(Integer a, Integer b) {
-        if (a == null && b == null) {
-            return "Ошибка. Чего-то не хватает.";
+        if (a == null || b == null) {
+            return "Упс, ошибочка. Чего-то не хватает.";
         }
         return a + " + " + b + " = " + (a + b);
     }
 
 
-    public String getMinusCalculator(int a, int b) {
+    public String getMinusCalculator(Integer a, Integer b) {
+        if (a == null || b == null) {
+            return "Упс, ошибочка. Чего-то не хватает.";
+        }
         return a + " - " + b + " = " + (a - b);
     }
 
-    public String getMultiplyCalculator(int a, int b) {
+    public String getMultiplyCalculator(Integer a, Integer b) {
+        if (a == null || b == null) {
+            return "Упс, ошибочка. Чего-то не хватает.";
+        }
         return a + " * " + b + " = " + (a * b);
     }
 

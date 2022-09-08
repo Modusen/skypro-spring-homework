@@ -25,18 +25,17 @@ public class CalculatorController {
     }
 
     @GetMapping(path = "/calculator/sum")
-    public String getSumCalculator(@RequestParam("num1") Integer a, @RequestParam("num2") Integer b) {
-
+    public String getSumCalculator(@RequestParam(value = "num1", required = false) Integer a, @RequestParam(value = "num2", required = false) Integer b) {
         return calculatorService.getSumCalculator(a, b);
     }
 
     @GetMapping(path = "/calculator/minus")
-    public String getMinusCalculator(@RequestParam("num1") Integer a, @RequestParam("num2") Integer b) {
+    public String getMinusCalculator(@RequestParam(value = "num1", required = false) Integer a, @RequestParam(value = "num2", required = false) Integer b) {
         return calculatorService.getMinusCalculator(a, b);
     }
 
     @GetMapping(path = "/calculator/multiply")
-    public String getMultiplyCalculator(@RequestParam("num1") Integer a, @RequestParam("num2") Integer b) {
+    public String getMultiplyCalculator(@RequestParam(value = "num1", required = false) Integer a, @RequestParam(value = "num2", required = false) Integer b) {
         return calculatorService.getMultiplyCalculator(a, b);
     }
 
