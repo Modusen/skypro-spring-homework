@@ -35,11 +35,16 @@ public class CalculatorService {
     }
 
     public String getDivideCalculator(int a, int b) {
-        if (b == 0) {
-            return "Деление на 0 невозможно!";
-        } else if (a % b == 0) {
-            return a + " / " + b + " = " + (a / b);
-        }
+//        try {
+            if (b == 0) {
+                throw new MyIllegalArgumentException();
+            } else if (a % b == 0) {
+                return a + " / " + b + " = " + (a / b);
+            }
+//        }
+//        catch (MyIllegalArgumentException e) {
+//            return "Divide by 0 is restricted!";
+//        }
         return a + " / " + b + " = " + (a * 1.0 / b);
     }
 }
